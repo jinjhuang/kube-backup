@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: broker
+  name: broker-deployment
+  namespace: default
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31760
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: broker
+  sessionAffinity: None
+  type: LoadBalancer

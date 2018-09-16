@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  provider-uid: 34a426065d54930f
+  uid: 34a426065d54930f
+kind: ConfigMap
+metadata:
+  name: ingress-uid
+  namespace: kube-system
